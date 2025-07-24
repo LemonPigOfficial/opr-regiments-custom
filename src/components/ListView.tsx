@@ -83,7 +83,7 @@ function UnitView({ unit }: { unit: Unit }) {
               <StatTile label="Def" value={`${unit.defense}+`} icon={mdiShield} />
               <StatTile
                 label="Tough"
-                value={(Math.Floor(tough * sizeMultiplier)).toString()}
+                value={(Math.floor(tough * sizeMultiplier)).toString()}
                 icon={mdiWater}
               />
             </Stack>
@@ -121,7 +121,7 @@ return (
       <Accordion defaultExpanded disableGutters>
         <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
           <Typography fontWeight="bold" flex={1}>
-            {unit.name} <span style={{ fontWeight: 400 }}>[{ Math.Floor(unit.size * sizeMultiplier)}]</span>
+            {unit.name} <span style={{ fontWeight: 400 }}>[{ Math.floor(unit.size * sizeMultiplier)}]</span>
           </Typography>
           <Typography>{unit.cost}pts</Typography>
         </AccordionSummary>
