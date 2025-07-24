@@ -13,19 +13,19 @@ export default function Settings() {
         <ButtonGroup>
           <Button
             variant={store.sizeMultiplier === 1 ? "contained" : "outlined"}
-            onClick={() => store.setSizeMultiplier(1)}
+            onClick={() => store.setsizeMultiplier(1)}
           >
             x1
           </Button>
           <Button
             variant={store.sizeMultiplier === 1.5 ? "contained" : "outlined"}
-            onClick={() => store.setSizeMultiplier(1.5)}
+            onClick={() => store.setsizeMultiplier(1.5)}
           >
             "x1.5"
           </Button>
           <Button
             variant={store.sizeMultiplier === 2 ? "contained" : "outlined"}
-            onClick={() => store.setSizeMultiplier(2)}
+            onClick={() => store.setsizeMultiplier(2)}
           >
             x2
           </Button>
@@ -38,13 +38,13 @@ export default function Settings() {
         </Typography>
         <ButtonGroup>
           <Button
-            variant={!store.halfRange ? "contained" : "outlined"}
+            variant={!store.BlastTemplates ? "contained" : "outlined"}
             onClick={() => store.setBlastTemplates(false)}
           >
             Traditional
           </Button>
           <Button
-            variant={store.halfRange ? "contained" : "outlined"}
+            variant={store.BlastTemplates ? "contained" : "outlined"}
             onClick={() => store.setBlastTemplates(true)}
           >
             Templates

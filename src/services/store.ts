@@ -15,8 +15,8 @@ export interface Store {
   setsizeMultiplier: (value: number) => void;
   loading: boolean;
   setLoading: (value: boolean) => void;
-  halfRange: boolean;
-  setHalfRange: (value: boolean) => void;
+  BlastTemplates: boolean;
+  setBlastTemplates: (value: boolean) => void;
 }
 
 export function createStore() {
@@ -33,8 +33,8 @@ export function createStore() {
     setsizeMultiplier: (value: number) => set(() => ({ sizeMultiplier: value }), undefined, "setsizeMultiplier"),
     loading: false,
     setLoading: (value: boolean) => set(() => ({ loading: value }), undefined, "setLoading"),
-    halfRange: false,
-    setHalfRange: (value: boolean) => set(() => ({ halfRange: value }), undefined, "setHalfRange"),
+    BlastTemplates: false,
+    setBlastTemplates: (value: boolean) => set(() => ({ BlastTemplates: value }), undefined, "setBlastTemplates"),
   })));
 }
 

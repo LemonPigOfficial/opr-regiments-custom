@@ -14,12 +14,12 @@ interface RuleListProps {
 const attackRules = ["Impact"];
 
 export default function RuleList({ unit, specialRules }: RuleListProps) {
-  const { rules, listResponse, attackMultiplier, halfRange } = useAppStore(
+  const { rules, listResponse, attackMultiplier, BlastTemplates } = useAppStore(
     useShallow((state) => state)
   );
   const ruleDefinitions = rules.concat(listResponse?.specialRules ?? []).map((x) => ({
     ...x,
-    description: transformRuleText(x.description, attackMultiplier, halfRange),
+    description: transformRuleText(x.description, attackMultiplier, BlastTemplates),
   }));
 
   if (!specialRules || specialRules.length === 0) return null;

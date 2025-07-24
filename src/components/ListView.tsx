@@ -33,12 +33,12 @@ export default function ListView() {
 }
 
 function UnitView({ unit }: { unit: Unit }) {
-  const { armyBooks, attackMultiplier, sizeMultiplier, halfRange } = useAppStore(
+  const { armyBooks, attackMultiplier, sizeMultiplier, BlastTemplates } = useAppStore(
     useShallow((state) => ({
       armyBooks: state.armyBooks,
       attackMultiplier: state.attackMultiplier,
       sizeMultiplier: state.sizeMultiplier,
-      halfRange: state.halfRange,
+      BlastTemplates: state.BlastTemplates,
     }))
   );
   const armyBook = armyBooks.find((x) => x.uid === unit.armyId);
@@ -106,7 +106,7 @@ function UnitView({ unit }: { unit: Unit }) {
                   <span style={{ fontWeight: "bold" }}>
                     {x.name} ({x.threshold}):{" "}
                   </span>{" "}
-                  {transformRuleText(x.effect, attackMultiplier, halfRange)}
+                  {transformRuleText(x.effect, attackMultiplier, BlastTemplates)}
                 </Typography>
               ))}
             </Box>
@@ -156,7 +156,7 @@ return (
                   <span style={{ fontWeight: "bold" }}>
                     {x.name} ({x.threshold}):{" "}
                   </span>{" "}
-                  {transformRuleText(x.effect, attackMultiplier, halfRange)}
+                  {transformRuleText(x.effect, attackMultiplier, BlastTemplates)}
                 </Typography>
               ))}
             </Box>
@@ -191,10 +191,10 @@ function LoadoutItemDisplay({ entry }: { entry: LoadoutEntry }) {
 }
 
 function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
-  const { halfRange, attackMultiplier } = useAppStore(
+  const { BlastTemplates, attackMultiplier } = useAppStore(
     useShallow((state) => ({
       attackMultiplier: state.attackMultiplier,
-      halfRange: state.halfRange,
+      BlastTemplates: state.BlastTemplates,
     }))
   );
   const hasRules = entry.specialRules?.length > 0;
