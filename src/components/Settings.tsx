@@ -21,7 +21,7 @@ export default function Settings() {
             variant={store.sizeMultiplier === 1.5 ? "contained" : "outlined"}
             onClick={() => store.setsizeMultiplier(1.5)}
           >
-            "x1.5"
+            x1.5
           </Button>
           <Button
             variant={store.sizeMultiplier === 2 ? "contained" : "outlined"}
