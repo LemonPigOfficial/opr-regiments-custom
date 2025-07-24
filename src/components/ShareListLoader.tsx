@@ -10,7 +10,7 @@ import { useShallow } from "zustand/shallow";
 // VU With caster
 // https://army-forge.onepagerules.com/share?id=t9ZC3D3A-wwH&name=Vampiric_Undead
 
-const tempUrl = "https://army-forge.onepagerules.com/share?id=wwcohMRXcpNS&name=Eternal_Dynasty";
+const tempUrl = https://army-forge.onepagerules.com/share?id=-oZkl4mAHJzQ&name=Beastmen_750;
 
 export default function ShareListLoader() {
   const router = useRouter();

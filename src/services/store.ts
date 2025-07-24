@@ -11,8 +11,8 @@ export interface Store {
   setRules: (rules: SpecialRuleDefinition[]) => void;
   attackMultiplier: number;
   setAttackMultiplier: (value: number) => void;
-  toughMultiplier: number;
-  setToughMultiplier: (value: number) => void;
+  sizeMultiplier: number;
+  setsizeMultiplier: (value: number) => void;
   loading: boolean;
   setLoading: (value: boolean) => void;
   halfRange: boolean;
@@ -27,10 +27,10 @@ export function createStore() {
     setArmyBooks: (armyBooks: ArmyBook[]) => set(() => ({ armyBooks }), undefined, "setArmyBooks"),
     rules: [],
     setRules: (rules: SpecialRuleDefinition[]) => set(() => ({ rules }), undefined, "setRules"),
-    attackMultiplier: 3,
+    attackMultiplier: 1,
     setAttackMultiplier: (value: number) => set(() => ({ attackMultiplier: value }), undefined, "setMultiplier"),
-    toughMultiplier: 3,
-    setToughMultiplier: (value: number) => set(() => ({ toughMultiplier: value }), undefined, "setToughMultiplier"),
+    sizeMultiplier: 2,
+    setsizeMultiplier: (value: number) => set(() => ({ sizeMultiplier: value }), undefined, "setsizeMultiplier"),
     loading: false,
     setLoading: (value: boolean) => set(() => ({ loading: value }), undefined, "setLoading"),
     halfRange: false,

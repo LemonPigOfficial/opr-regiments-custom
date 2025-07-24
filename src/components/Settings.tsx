@@ -8,72 +8,46 @@ export default function Settings() {
     <Stack direction="row" spacing={2} mb={1}>
       <Stack>
         <Typography variant="body2" fontWeight="bold">
-          Attack Multiplier
-        </Typography>
-        <ButtonGroup>
-          <Button
-            variant={store.attackMultiplier === 1 ? "contained" : "outlined"}
-            onClick={() => store.setAttackMultiplier(1)}
-          >
-            x1
-          </Button>
-          <Button
-            variant={store.attackMultiplier === 2 ? "contained" : "outlined"}
-            onClick={() => store.setAttackMultiplier(2)}
-          >
-            x2
-          </Button>
-          <Button
-            variant={store.attackMultiplier === 3 ? "contained" : "outlined"}
-            onClick={() => store.setAttackMultiplier(3)}
-          >
-            x3
-          </Button>
-        </ButtonGroup>
-      </Stack>
-
-      <Stack>
-        <Typography variant="body2" fontWeight="bold">
           Tough Multiplier
         </Typography>
         <ButtonGroup>
           <Button
-            variant={store.toughMultiplier === 1 ? "contained" : "outlined"}
-            onClick={() => store.setToughMultiplier(1)}
+            variant={store.sizeMultiplier === 1 ? "contained" : "outlined"}
+            onClick={() => store.setSizeMultiplier(1)}
           >
             x1
           </Button>
           <Button
-            variant={store.toughMultiplier === 2 ? "contained" : "outlined"}
-            onClick={() => store.setToughMultiplier(2)}
+            variant={store.sizeMultiplier === 1.5 ? "contained" : "outlined"}
+            onClick={() => store.setSizeMultiplier(1.5)}
           >
-            x2
+            "x1.5"
           </Button>
           <Button
-            variant={store.toughMultiplier === 3 ? "contained" : "outlined"}
-            onClick={() => store.setToughMultiplier(3)}
+            variant={store.sizeMultiplier === 2 ? "contained" : "outlined"}
+            onClick={() => store.setSizeMultiplier(2)}
           >
-            x3
+            x2
           </Button>
         </ButtonGroup>
       </Stack>
 
       <Stack>
         <Typography variant="body2" fontWeight="bold">
-          Ranges
+          Blast
         </Typography>
         <ButtonGroup>
           <Button
             variant={!store.halfRange ? "contained" : "outlined"}
-            onClick={() => store.setHalfRange(false)}
+            onClick={() => store.setBlastTemplates(false)}
           >
-            Full
+            Traditional
           </Button>
           <Button
             variant={store.halfRange ? "contained" : "outlined"}
-            onClick={() => store.setHalfRange(true)}
+            onClick={() => store.setBlastTemplates(true)}
           >
-            Half
+            Templates
           </Button>
         </ButtonGroup>
       </Stack>

@@ -16,10 +16,11 @@ export default function Home() {
       <ThemeProvider theme={theme}>
         <Container sx={{ pt: 2 }}>
           <Stack sx={{ mb: 2 }} spacing={1}>
-            <Typography variant="h5">OPR GFF/AoFS Beefy Mode!</Typography>
+            <Typography variant="h5">OPR GDF/AoFR Retro Mode!</Typography>
             <Typography>
               Welcome! This is a super simple lightweight app that will take your Army Forge list,
-              and multiply all of the attacks and toughness by 1-3x.
+              multiply all of the unit sizes by 1-2x, do the same for unit toughness of single
+			  model units, and optionally add blast template rules.
             </Typography>
             <Typography>
               Start by entering the "Share by link" URL from Army Forge in the box below, and hit
