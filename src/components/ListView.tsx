@@ -115,9 +115,8 @@ function UnitView({ unit }: { unit: Unit }) {
       </Accordion>
     </Card>
   )
-};
-else 
-  return (
+} else {
+return (
     <Card sx={{ mb: 2 }}>
       <Accordion defaultExpanded disableGutters>
         <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
