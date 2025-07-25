@@ -270,7 +270,7 @@ function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
   const hasRules = entry.specialRules?.length > 0;
   return (
     <Typography>
-      <Typography variant="caption">{entry.count || 1}x</Typography> {entry.name} (
+      <Typography variant="caption">{Math.floor(entry.count * sizeMultiplier|| 1)}x</Typography> {entry.name} (
       {entry.range > 0 && `${entry.range}", `}A
       {entry.attacks * attackMultiplier}
       {hasRules && ", "}
@@ -291,7 +291,7 @@ function StatTile({ label, value, icon }: { label: string; value: string; icon: 
       }}
     >
       <Stack direction="row" alignItems="center">
-        <Icon path={icon} size={0.4} color="grey" />
+        <Icon path={icon} size={0.6} color="grey" />
         <Typography textAlign="left" sx={{ flex: 1 }}>
           {label}
         </Typography>
