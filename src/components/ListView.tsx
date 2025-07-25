@@ -15,7 +15,7 @@ import RuleList from "./RuleList";
 import { orderBy } from "lodash";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Icon from "@mdi/react";
-import { mdiShield, mdiWater, mdiSword } from "@mdi/js";
+import { mdiShield, mdiWater, mdiSword, mdiDiceMultiple } from "@mdi/js";
 import { transformRuleText } from "@/services/helpers";
 
 export default function ListView() {
@@ -99,7 +99,7 @@ function UnitView({ unit }: { unit: Unit }) {
               <StatTile
                 label="Extra Attacks"
                 value={(Math.floor(sizeMultiplier * 3)).toString()}
-                icon={mdiAxe}
+                icon={mdiDiceMultiple}
               />
             </Stack>
             <Stack>
@@ -154,7 +154,7 @@ function UnitView({ unit }: { unit: Unit }) {
               <StatTile
                 label="Extra Attacks"
                 value={(Math.floor(sizeMultiplier * 2)).toString()}
-                icon={mdiAxe}
+                icon={mdiDiceMultiple}
               />
             </Stack>
             <Stack>
