@@ -291,11 +291,11 @@ function StatTile({ label, value, icon }: { label: string; value: string; icon: 
       }}
     >
       <Stack direction="row" alignItems="center">
-        <Icon path={icon} size={0.8} color="grey" />
+        <Icon path={icon} size={0.4} color="grey" />
         <Typography textAlign="left" sx={{ flex: 1 }}>
           {label}
         </Typography>
-        <Typography fontSize={24} fontWeight="bold">
+        <Typography fontSize={12} fontWeight="bold">
           {value}
         </Typography>
       </Stack>
