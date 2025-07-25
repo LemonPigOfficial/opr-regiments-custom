@@ -261,16 +261,17 @@ function LoadoutItemDisplay({ entry }: { entry: LoadoutEntry }) {
 }
 
 function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
-  const { BlastTemplates, attackMultiplier } = useAppStore(
+  const { BlastTemplates, attackMultiplier, sizeMultiplier } = useAppStore(
     useShallow((state) => ({
       attackMultiplier: state.attackMultiplier,
       BlastTemplates: state.BlastTemplates,
+	  sizeMultiplier: state.sizeMultiplier,
     }))
   );
   const hasRules = entry.specialRules?.length > 0;
   return (
     <Typography>
-      <Typography variant="caption">{entry.count || 1}x</Typography> {entry.name} (
+      <Typography variant="caption">{Math.floor(entry.count * sizeMultiplier || 1)}x</Typography> {entry.name} (
       {entry.range > 0 && `${entry.range}", `}A
       {entry.attacks * attackMultiplier}
       {hasRules && ", "}
