@@ -265,7 +265,7 @@ function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
     useShallow((state) => ({
       attackMultiplier: state.attackMultiplier,
       BlastTemplates: state.BlastTemplates,
-	  sizeMultiplier: state.sizeMultiplier
+	  sizeMultiplier: state.sizeMultiplier,
     }))
   );
   const hasRules = entry.specialRules?.length > 0;
