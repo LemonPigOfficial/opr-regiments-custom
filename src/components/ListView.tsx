@@ -265,11 +265,23 @@ function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
     useShallow((state) => ({
       attackMultiplier: state.attackMultiplier,
       BlastTemplates: state.BlastTemplates,
-	  sizeMultiplier: state.sizeMultiplier,
+	  sizeMultiplier: state.sizeMultiplier
     }))
   );
   const hasRules = entry.specialRules?.length > 0;
-  return (
+  if (entry.count = 1) 
+  {
+	return (
+    <Typography>
+      <Typography variant="caption">{1}x</Typography> {entry.name} (
+      {entry.range > 0 && `${entry.range}", `}A
+      {entry.attacks * attackMultiplier}
+      {hasRules && ", "}
+      <RuleList specialRules={entry.specialRules} />)
+    </Typography>
+  );
+  } else {
+	return (
     <Typography>
       <Typography variant="caption">{Math.floor(entry.count * sizeMultiplier || 1)}x</Typography> {entry.name} (
       {entry.range > 0 && `${entry.range}", `}A
@@ -278,6 +290,7 @@ function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
       <RuleList specialRules={entry.specialRules} />)
     </Typography>
   );
+  }
 }
 
 function StatTile({ label, value, icon }: { label: string; value: string; icon: any }) {
