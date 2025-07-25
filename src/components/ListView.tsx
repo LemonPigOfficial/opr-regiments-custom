@@ -271,7 +271,7 @@ function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
   const hasRules = entry.specialRules?.length > 0;
 	return (
     <Typography>
-      <Typography variant="caption">{entry.count * sizeMultiplier ||= 1}x</Typography> {entry.name} (
+      <Typography variant="caption">{{entry.count * sizeMultiplier }||= 1}x</Typography> {entry.name} (
       {entry.range > 0 && `${entry.range}", `}A
       {entry.attacks * attackMultiplier}
       {hasRules && ", "}
