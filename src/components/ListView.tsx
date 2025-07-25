@@ -67,7 +67,7 @@ function UnitView({ unit }: { unit: Unit }) {
   const isCreature = unit.rules
     .concat(upgradeRules)
     .concat(loadoutRules)
-    .some((tough) => (6));
+    .some((x) => x.name === "Fear");
 
   const isCaster = unit.rules
     .concat(upgradeRules)
@@ -75,7 +75,7 @@ function UnitView({ unit }: { unit: Unit }) {
     .some((x) => x.name === "Caster");
 
   const spells = isCaster && armyBook?.spells;
-  if (!isHero && isCreature || isEntrenched) {
+  if (isCreature || isEntrenched) {
   return (
     <Card sx={{ mb: 2 }}>
       <Accordion defaultExpanded disableGutters>
