@@ -96,11 +96,6 @@ function UnitView({ unit }: { unit: Unit }) {
                 value={(Math.floor(tough * sizeMultiplier)).toString()}
                 icon={mdiWater}
               />
-              <StatTile
-                label="Extra Attacks"
-                value={(Math.floor(sizeMultiplier * 3)).toString()}
-                icon={mdiDiceMultiple}
-              />
             </Stack>
             <Stack>
               <Box mb={1}>
@@ -150,11 +145,6 @@ function UnitView({ unit }: { unit: Unit }) {
                 label="Tough"
                 value={(Math.floor(tough * sizeMultiplier)).toString()}
                 icon={mdiWater}
-              />
-              <StatTile
-                label="Extra Attacks"
-                value={(Math.floor(sizeMultiplier * 2)).toString()}
-                icon={mdiDiceMultiple}
               />
             </Stack>
             <Stack>
