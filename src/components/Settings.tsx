@@ -8,7 +8,7 @@ export default function Settings() {
     <Stack direction="row" spacing={2} mb={1}>
       <Stack>
         <Typography variant="body2" fontWeight="bold">
-          Tough Multiplier
+          Game Size Multiplier
         </Typography>
         <ButtonGroup>
           <Button
@@ -47,7 +47,7 @@ export default function Settings() {
             variant={store.BlastTemplates ? "contained" : "outlined"}
             onClick={() => store.setBlastTemplates(true)}
           >
-            Templates
+            WIP Templates
           </Button>
         </ButtonGroup>
       </Stack>
