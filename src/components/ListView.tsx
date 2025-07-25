@@ -269,28 +269,15 @@ function WeaponDisplay({ entry }: { entry: LoadoutEntry }) {
     }))
   );
   const hasRules = entry.specialRules?.length > 0;
-  if (entry.count = 1) 
-  {
 	return (
     <Typography>
-      <Typography variant="caption">{1}x</Typography> {entry.name} (
+      <Typography variant="caption">{1 || entry.count * sizeMultiplier}x</Typography> {entry.name} (
       {entry.range > 0 && `${entry.range}", `}A
       {entry.attacks * attackMultiplier}
       {hasRules && ", "}
       <RuleList specialRules={entry.specialRules} />)
     </Typography>
   );
-  } else {
-	return (
-    <Typography>
-      <Typography variant="caption">{Math.floor(entry.count * sizeMultiplier || 1)}x</Typography> {entry.name} (
-      {entry.range > 0 && `${entry.range}", `}A
-      {entry.attacks * attackMultiplier}
-      {hasRules && ", "}
-      <RuleList specialRules={entry.specialRules} />)
-    </Typography>
-  );
-  }
 }
 
 function StatTile({ label, value, icon }: { label: string; value: string; icon: any }) {
