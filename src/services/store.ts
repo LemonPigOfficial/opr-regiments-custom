@@ -27,6 +27,8 @@ export function createStore() {
     setArmyBooks: (armyBooks: ArmyBook[]) => set(() => ({ armyBooks }), undefined, "setArmyBooks"),
     rules: [],
     setRules: (rules: SpecialRuleDefinition[]) => set(() => ({ rules }), undefined, "setRules"),
+    attackMultiplier: 1,
+    setAttackMultiplier: (value: number) => set(() => ({ attackMultiplier: value }), undefined, "setMultiplier"),
     sizeMultiplier: 2,
     setsizeMultiplier: (value: number) => set(() => ({ sizeMultiplier: value }), undefined, "setsizeMultiplier"),
     loading: false,
